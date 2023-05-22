@@ -1,0 +1,6 @@
+aws-psycopg2
+requests
+pandas
+boto3
+pymysql
+numpy

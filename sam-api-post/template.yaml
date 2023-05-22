@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  GetProductFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: postgres-insert.handler
+      Runtime: python3.9
+      Environment:
+        Variables:
+          POSTGRES_HOST: tinitiate_postgres
+          POSTGRES_PORT: 5432
+          POSTGRES_DB: tinitiate
+          POSTGRES_USER: tinitiate
+          POSTGRES_PASSWORD: tinitiate
+      Events:
+        ApiPut:
+          Type: Api
+          Properties:
+            Path: /products
+            Method: POST
