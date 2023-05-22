@@ -35,6 +35,11 @@ sam-api-get/
   ```shell
   $ cd python-aws/sam-api-get
   ```
+* Build the SAM application by executing the following command:
+  ```shell
+  sam build
+  ```
+
 * Deploy the AWS SAM application using the SAM CLI:
 
   ```shell
