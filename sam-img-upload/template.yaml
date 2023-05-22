@@ -1,0 +1,29 @@
+# These lines 2 and 3 are mandatory for all SAM Templates
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  serverless app 
+
+  Template for servless app.
+
+Resources:
+  UploadTOS3BucketFunction:   
+   Type: AWS::Serverless::Function
+   Properties:
+    PackageType: Image
+    Architectures:
+        - x86_64
+   Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./upload-to-s3-bucket/
+      DockerTag: python3.9-v1
+
+Outputs:
+  GetS3BucketsFunction:
+    Description: "Upload TO S3 Bucket Function ARN"
+    Value: !GetAtt UploadTOS3BucketFunction.Arn
+  
+  GetS3BucketsFunctionIamRole:
+    Description: "Implicit IAM Role created for Get S3 Buckets Function"
+    Value: !GetAtt GetS3BucketsFunctionRole.Arn
+  
