@@ -1,0 +1,31 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Resources:
+  MyLambdaFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: 'api-get.get_records'
+      Runtime: 'python3.9'
+      Timeout: 60
+  GetRecordsApi:
+    Type: 'AWS::Serverless::Api'
+    Properties:
+      StageName: dev
+      DefinitionBody:
+        swagger: "2.0"
+        paths:
+          /records:
+            get:
+              parameters:
+                - name: "column1"
+                  in: "query"
+                  required: true
+                - name: "column2"
+                  in: "query"
+                  required: true
+              responses:
+                200:
+                  description: "Successful response"
+              x-amazon-apigateway-integration:
+                type: "aws_proxy"
+                uri: !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${MyLambdaFunction.Arn}/invocations"
