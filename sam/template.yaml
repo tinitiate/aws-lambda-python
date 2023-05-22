@@ -1,0 +1,31 @@
+# These lines 2 and 3 are mandatory for all SAM Templates
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  serverless app 
+
+  Template for servless app.
+
+Resources:
+  GetS3BucketsFunction:   
+   Type: AWS::Serverless::Function
+   Properties:
+    FunctionName: GetS3Buckets
+    Description: Lambda function which gets the S3 buckets
+    CodeUri: get-s3-buckets/
+    Handler: app.s3buckets
+    Runtime: python3.9
+    Timeout: 60
+    Architectures:
+        - x86_64
+    Events:
+        HelloWorld:
+          Type: Api 
+          Properties:
+            Path: /buckets
+            Method: get
+
+Outputs:
+  GetS3BucketsFunction:
+    Description: "Get S3 Buckets Function ARN"
+    Value: !GetAtt GetS3BucketsFunction.Arn
