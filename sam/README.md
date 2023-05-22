@@ -17,7 +17,7 @@
  * This directory contains the code for the AWS SAM application.
 
  `app.py`
- * This is the main Python file that defines the API endpoint logic. 
+ * This is the main Python file that defines the Lambda function logic. 
 
   `requirements.txt`
   * This file lists the Python dependencies required by the application. 
