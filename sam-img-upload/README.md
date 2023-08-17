@@ -116,25 +116,6 @@ The `app.py` file in the `image_upload` directory contains the implementation of
 1. After deployment, AWS SAM will provide an S3 bucket to which you can upload image files.
 2. You can use tools like the AWS CLI or SDKs to upload image files to the provided S3 bucket. The Lambda function will be triggered automatically upon successful uploads.
 
-## Example Lambda Function
-
-The Lambda function (`app.py`) in the `image_upload` directory demonstrates how to handle image file uploads to an S3 bucket. It's designed to process incoming image files, but you can extend it to perform additional tasks such as resizing images, updating a database, or triggering other AWS services.
-
-Feel free to customize the function to match your use case and business logic.
-
-## Notes
-
-- This example serves as a starting point. You can modify and expand upon it to meet your application's requirements.
-- Be cautious with deploying resources in your AWS account, especially if you're using this in a production environment.
-
-## Contributing
-
-Feel free to fork this repository and make improvements or add more examples. Pull requests are welcome!
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ---
 
 This README provides detailed explanations about the structure of the example, the SAM template, package types, and the `template.yaml` file. Customize the instructions based on your specific repository structure and the complexity of your application.
