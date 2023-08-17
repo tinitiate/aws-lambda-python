@@ -119,6 +119,3 @@ The SAM template topology forms a hierarchy where resources and other constructs
     - Flags:
       - `--host`: Specify the host for the local Lambda runtime.
       - `--port`: Specify the port for the local Lambda runtime.
-
-
-
