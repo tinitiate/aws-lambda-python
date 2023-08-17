@@ -133,7 +133,7 @@ The `postgres-insert.py` file in the `sam-api-post` directory contains the imple
 
 1. After deployment, the API Gateway endpoint URL will be provided. Use this URL to send HTTP POST requests to trigger the Lambda function.
 
-## Example Lambda Function
+## Lambda Function
 
 The Lambda function (`postgres-insert.py`) in the `sam-api-post` directory demonstrates handling HTTP POST requests and interacting with a PostgreSQL database. The function can be further customized to suit your specific use case.
 
