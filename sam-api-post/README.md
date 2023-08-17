@@ -1,7 +1,5 @@
+# AWS Lambda Python Example - `sam-api-post`
 ---
-
-# AWS Lambda Python Example - `sam-api-post` Directory
-
 This directory contains an example AWS Lambda function implemented in Python using AWS SAM (Serverless Application Model). The function is designed to handle HTTP POST requests.
 
 ## Prerequisites
