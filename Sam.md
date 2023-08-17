@@ -120,17 +120,5 @@ The SAM template topology forms a hierarchy where resources and other constructs
       - `--host`: Specify the host for the local Lambda runtime.
       - `--port`: Specify the port for the local Lambda runtime.
 
-Boto3 clients and resources :
 
-| Aspect                 | Boto3 Client                                       | Boto3 Resource                                  |
-| ---------------------- | -------------------------------------------------- | ----------------------------------------------- |
-| Usage                  | Low-level service operations with direct API calls | High-level object-oriented interaction          |
-| CRUD Operations        | Explicitly call methods for each operation         | Access operations as attributes of the resource |
-| Data Retrieval         | Returns raw response data                          | Returns Python objects                          |
-| Object-Oriented Design | No, follows the service's API structure            | Yes, provides classes and methods               |
-| Resource Tracking      | No built-in resource tracking                      | Yes, Boto3 tracks created resources             |
-| Collection Operations  | Limited support for collections                    | Supports filtering and iteration over resources |
-| Initialization         | Requires specifying service name and region        | Requires specifying service name and region     |
-| Example                | `client = boto3.client('s3')`                      | `resource = boto3.resource('s3')`               |
 
-Remember that the choice between using clients and resources depends on your use case. Clients offer lower-level control, while resources provide a more Pythonic and high-level abstraction for interacting with AWS services.
