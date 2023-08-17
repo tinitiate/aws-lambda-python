@@ -1,5 +1,3 @@
-Certainly, here's the updated README file for the `sam-api-post` example with the corrected order for local testing and deployment steps:
-
 ---
 
 # AWS Lambda Python Example - `sam-api-post` Directory
