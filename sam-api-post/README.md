@@ -1,5 +1,5 @@
 # AWS Lambda Python Example - `sam-api-post`
----
+
 This directory contains an example AWS Lambda function implemented in Python using AWS SAM (Serverless Application Model). The function is designed to handle HTTP POST requests.
 
 ## Prerequisites
@@ -135,6 +135,6 @@ The `postgres-insert.py` file in the `sam-api-post` directory contains the imple
 
 The Lambda function (`postgres-insert.py`) in the `sam-api-post` directory demonstrates handling HTTP POST requests and interacting with a PostgreSQL database. The function can be further customized to suit your specific use case.
 
----
+
 
 This README provides detailed explanations about the structure of the example, the SAM template, the `postgres-insert.py` code, instructions for local testing and deployment, and explanations for the environment variables. Customize the instructions based on your specific repository structure and the complexity of your application.
